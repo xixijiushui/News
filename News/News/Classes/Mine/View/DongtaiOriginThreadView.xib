@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DongtaiOriginThreadView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-SI-UCf" customClass="DongtaiCollectionView" customModule="News" customModuleProvider="target">
+                    <rect key="frame" x="15" y="10" width="0.0" height="206"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="yUG-Kz-BJW"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yFy-NZ-CJA">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osQ-cb-vC9">
+                    <rect key="frame" x="15" y="10" width="345" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="hD7-Aq-eg7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="osQ-cb-vC9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="1rl-5F-jd3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="osQ-cb-vC9" secondAttribute="trailing" constant="15" id="7mc-Sv-Jdb"/>
+                <constraint firstItem="Lvf-SI-UCf" firstAttribute="top" secondItem="osQ-cb-vC9" secondAttribute="bottom" id="AYI-To-OX2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Lvf-SI-UCf" secondAttribute="bottom" constant="20" id="Ngj-Yp-yQC"/>
+                <constraint firstItem="Lvf-SI-UCf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Zkg-Ml-xis"/>
+                <constraint firstItem="osQ-cb-vC9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="wPg-6g-bC5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="Lvf-SI-UCf" id="S2V-kA-bLE"/>
+                <outlet property="collectionViewWidth" destination="yUG-Kz-BJW" id="emw-1O-Lr9"/>
+                <outlet property="contentLabel" destination="osQ-cb-vC9" id="KeA-zl-NrI"/>
+                <outlet property="contentLabelHeight" destination="hD7-Aq-eg7" id="otK-hz-Z6D"/>
+            </connections>
+        </view>
+    </objects>
+</document>

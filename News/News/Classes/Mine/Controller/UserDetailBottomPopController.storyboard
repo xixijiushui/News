@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Detail Bottom Pop Controller-->
+        <scene sceneID="Ydb-PV-4SJ">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailBottomPopController" id="Uie-Qt-B0a" customClass="UserDetailBottomPopController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CWC-3d-uly"/>
+                        <viewControllerLayoutGuide type="bottom" id="hYm-7t-A6J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMw-l1-gGu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup_118x58_" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-LC-If2">
+                                <rect key="frame" x="-10" y="20" width="395" height="647"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvM-2u-6ts">
+                                <rect key="frame" x="0.0" y="30" width="375" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jvM-2u-6ts" firstAttribute="leading" secondItem="CMw-l1-gGu" secondAttribute="leading" id="1LH-nM-GZb"/>
+                            <constraint firstItem="hYm-7t-A6J" firstAttribute="top" secondItem="4Md-LC-If2" secondAttribute="bottom" id="5WQ-iA-Cv5"/>
+                            <constraint firstAttribute="trailing" secondItem="4Md-LC-If2" secondAttribute="trailing" constant="-10" id="5eY-t1-7pX"/>
+                            <constraint firstItem="hYm-7t-A6J" firstAttribute="top" secondItem="jvM-2u-6ts" secondAttribute="bottom" constant="15" id="AYl-o1-yqN"/>
+                            <constraint firstItem="4Md-LC-If2" firstAttribute="top" secondItem="CWC-3d-uly" secondAttribute="bottom" id="BLs-rI-blT"/>
+                            <constraint firstItem="4Md-LC-If2" firstAttribute="leading" secondItem="CMw-l1-gGu" secondAttribute="leading" constant="-10" id="hn9-g6-mAO"/>
+                            <constraint firstAttribute="trailing" secondItem="jvM-2u-6ts" secondAttribute="trailing" id="qCM-z4-LhE"/>
+                            <constraint firstItem="jvM-2u-6ts" firstAttribute="top" secondItem="CWC-3d-uly" secondAttribute="bottom" constant="10" id="qG9-PH-eP1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jvM-2u-6ts" id="Z1e-16-rrb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWn-ih-WLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popup_118x58_" width="118" height="58"/>
+    </resources>
+</document>

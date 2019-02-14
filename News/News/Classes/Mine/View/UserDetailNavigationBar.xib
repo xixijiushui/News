@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FwZ-oi-Szc" customClass="UserDetailNavigationBar" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-RP-Z1f">
+                    <rect key="frame" x="0.0" y="-44" width="375" height="88"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-PV-oyz">
+                    <rect key="frame" x="0.0" y="4.5" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="8pv-hU-C6N"/>
+                        <constraint firstAttribute="width" constant="35" id="WtS-7b-xIM"/>
+                    </constraints>
+                    <state key="normal" image="personal_home_back_white_24x24_"/>
+                    <connections>
+                        <action selector="returnButtonClicked:" destination="FwZ-oi-Szc" eventType="touchUpInside" id="xmp-Fv-BTF"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-Ce-K5g">
+                    <rect key="frame" x="152.5" y="11.5" width="70" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="ra8-Do-8f0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EC-wR-2vR" customClass="AnimatableButton" customModule="IBAnimatable">
+                    <rect key="frame" x="232.5" y="8" width="72" height="28"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.3921568627" blue="0.37254901959999998" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Lwi-sc-MiW"/>
+                        <constraint firstAttribute="width" constant="72" id="ZAX-O3-9V4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="关注"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="concernButtonClicked:" destination="FwZ-oi-Szc" eventType="touchUpInside" id="jO7-jq-sc9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1U-hI-wWx">
+                    <rect key="frame" x="340" y="4.5" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Ycp-Ee-kNW"/>
+                        <constraint firstAttribute="width" constant="35" id="Zth-ED-icx"/>
+                    </constraints>
+                    <state key="normal" image="new_morewhite_titlebar_22x22_"/>
+                    <connections>
+                        <action selector="moreButtonClicked:" destination="FwZ-oi-Szc" eventType="touchUpInside" id="kL6-Eu-MON"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EnZ-PV-oyz" firstAttribute="centerY" secondItem="FwZ-oi-Szc" secondAttribute="centerY" id="3sf-Tc-lhx"/>
+                <constraint firstItem="Mh2-RP-Z1f" firstAttribute="leading" secondItem="FwZ-oi-Szc" secondAttribute="leading" id="FXR-cM-aaR"/>
+                <constraint firstItem="VH1-Ce-K5g" firstAttribute="centerX" secondItem="FwZ-oi-Szc" secondAttribute="centerX" id="TAP-MT-v9i"/>
+                <constraint firstItem="Mh2-RP-Z1f" firstAttribute="top" secondItem="ZAb-zy-j0e" secondAttribute="top" constant="-44" id="Yod-fT-wWr"/>
+                <constraint firstItem="N1U-hI-wWx" firstAttribute="centerY" secondItem="EnZ-PV-oyz" secondAttribute="centerY" id="bJy-IP-FOx"/>
+                <constraint firstItem="8EC-wR-2vR" firstAttribute="leading" secondItem="VH1-Ce-K5g" secondAttribute="trailing" constant="10" id="erp-YU-F5f"/>
+                <constraint firstItem="ZAb-zy-j0e" firstAttribute="trailing" secondItem="N1U-hI-wWx" secondAttribute="trailing" id="fSh-Yk-7UK"/>
+                <constraint firstItem="ZAb-zy-j0e" firstAttribute="trailing" secondItem="Mh2-RP-Z1f" secondAttribute="trailing" id="jTF-Hv-k6S"/>
+                <constraint firstItem="EnZ-PV-oyz" firstAttribute="leading" secondItem="ZAb-zy-j0e" secondAttribute="leading" id="kwF-1R-8Lp"/>
+                <constraint firstItem="8EC-wR-2vR" firstAttribute="centerY" secondItem="VH1-Ce-K5g" secondAttribute="centerY" id="tU2-O3-eYO"/>
+                <constraint firstItem="VH1-Ce-K5g" firstAttribute="centerY" secondItem="FwZ-oi-Szc" secondAttribute="centerY" id="utg-DI-Hj4"/>
+                <constraint firstItem="Mh2-RP-Z1f" firstAttribute="bottom" secondItem="ZAb-zy-j0e" secondAttribute="bottom" id="y1c-mP-FFW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ZAb-zy-j0e"/>
+            <connections>
+                <outlet property="concernButton" destination="8EC-wR-2vR" id="2cT-kP-IlR"/>
+                <outlet property="moreButton" destination="N1U-hI-wWx" id="5li-vu-mlu"/>
+                <outlet property="nameLabel" destination="VH1-Ce-K5g" id="Yhm-J7-QjT"/>
+                <outlet property="navigationBar" destination="Mh2-RP-Z1f" id="aw9-Ub-8DL"/>
+                <outlet property="returnButton" destination="EnZ-PV-oyz" id="eDL-yV-LHy"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="new_morewhite_titlebar_22x22_" width="22" height="22"/>
+        <image name="personal_home_back_white_24x24_" width="24" height="24"/>
+    </resources>
+</document>

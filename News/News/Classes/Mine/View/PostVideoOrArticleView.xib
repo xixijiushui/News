@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostVideoOrArticleView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-Ne-jbW">
+                    <rect key="frame" x="50" y="0.0" width="325" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXZ-vw-G7L">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="WLO-gD-9Vw"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3w-6z-vRb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <connections>
+                        <action selector="coverButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="tNt-le-PYq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A3w-6z-vRb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1Kn-Zb-ZsF"/>
+                <constraint firstItem="gi8-Ne-jbW" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="7Wa-Kz-mfP"/>
+                <constraint firstItem="tXZ-vw-G7L" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AX3-pv-Sor"/>
+                <constraint firstItem="tXZ-vw-G7L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dmd-c4-fgw"/>
+                <constraint firstItem="A3w-6z-vRb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Hjl-gj-1hH"/>
+                <constraint firstItem="gi8-Ne-jbW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Mpi-g4-2ap"/>
+                <constraint firstItem="gi8-Ne-jbW" firstAttribute="leading" secondItem="tXZ-vw-G7L" secondAttribute="trailing" id="VXp-yW-Qlv"/>
+                <constraint firstItem="tXZ-vw-G7L" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="XYR-Bk-zJp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gi8-Ne-jbW" secondAttribute="trailing" id="YAV-Lb-e00"/>
+                <constraint firstItem="A3w-6z-vRb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gzO-ir-JUA"/>
+                <constraint firstItem="A3w-6z-vRb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yUa-e1-NTH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="iconButton" destination="tXZ-vw-G7L" id="VhK-ob-3lk"/>
+                <outlet property="iconBuuttonWidth" destination="WLO-gD-9Vw" id="kzy-Da-qrB"/>
+                <outlet property="titleLabel" destination="gi8-Ne-jbW" id="u3F-ta-gMc"/>
+            </connections>
+        </view>
+    </objects>
+</document>

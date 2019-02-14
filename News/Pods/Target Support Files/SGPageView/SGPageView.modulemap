@@ -1,0 +1,6 @@
+framework module SGPageView {
+  umbrella header "SGPageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RelationRecommendView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZG-jE-f2R">
+                    <rect key="frame" x="15" y="0.0" width="360" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="J2D-o4-aMK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-w4-6vr">
+                    <rect key="frame" x="0.0" y="32" width="375" height="201"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qIW-oh-EGc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DZG-jE-f2R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="6Ip-WR-v5s"/>
+                <constraint firstItem="Tgu-w4-6vr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6MM-a4-iJE"/>
+                <constraint firstItem="Tgu-w4-6vr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="B0I-2u-CSR"/>
+                <constraint firstItem="Tgu-w4-6vr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Ehy-bg-q2u"/>
+                <constraint firstItem="DZG-jE-f2R" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Srz-sZ-L75"/>
+                <constraint firstItem="Tgu-w4-6vr" firstAttribute="top" secondItem="DZG-jE-f2R" secondAttribute="bottom" id="rfg-XW-JAh"/>
+                <constraint firstItem="DZG-jE-f2R" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xnd-VD-f99"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="Tgu-w4-6vr" id="9D5-gi-jG0"/>
+                <outlet property="labelHeight" destination="J2D-o4-aMK" id="CyK-s6-6hH"/>
+            </connections>
+        </view>
+    </objects>
+</document>
